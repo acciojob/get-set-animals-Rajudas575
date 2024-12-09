@@ -1,48 +1,45 @@
 // Base Animal class
 class Animal {
-    species: string;
-
-    constructor(species: string) {
+    constructor(species) {
         this.species = species;
     }
 
     // Getter for species
-    getSpecies(): string {
+    getSpecies() {
         return this.species;
     }
 
     // Method to make sound
-    makeSound(): void {
+    makeSound() {
         console.log(`The ${this.species} makes a sound`);
     }
 }
 
 // Cat class extending Animal
 class Cat extends Animal {
-    constructor(species: string) {
+    constructor(species) {
         super(species); // Call the constructor of the parent class (Animal)
     }
 
     // Method to make a purring sound
-    purr(): void {
+    purr() {
         console.log('purr');
     }
 }
 
 // Dog class extending Animal
 class Dog extends Animal {
-    constructor(species: string) {
-        super(species); // Call the constructor of the parent class (Animal)
+    constructor(species) {
+        super(species);
     }
 
     // Method to make a barking sound
-    bark(): void {
+    bark() {
         console.log('woof');
     }
 }
 
 // Example usage:
-
 const myCat = new Cat("Siamese");
 myCat.makeSound(); // Output: The Siamese makes a sound
 myCat.purr(); // Output: purr
