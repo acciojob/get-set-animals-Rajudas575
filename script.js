@@ -1,43 +1,44 @@
-//complete this code
-// Animal class
+// Base Animal class
 class Animal {
-  constructor(species) {
-    this._species = species;
-  }
+    species: string;
 
-  // Getter for species
-  get species() {
-    return this._species;
-  }
+    constructor(species: string) {
+        this.species = species;
+    }
 
-  // Method that logs the sound the animal makes
-  makeSound() {
-    console.log(`The ${this._species} makes a sound`);
-  }
+    // Getter for species
+    getSpecies(): string {
+        return this.species;
+    }
+
+    // Method to make sound
+    makeSound(): void {
+        console.log(`The ${this.species} makes a sound`);
+    }
 }
 
-// Cat class (extends Animal)
+// Cat class extending Animal
 class Cat extends Animal {
-  constructor(species) {
-    super(species);
-  }
+    constructor(species: string) {
+        super(species); // Call the constructor of the parent class (Animal)
+    }
 
-  // Method that logs "purr" for the cat
-  purr() {
-    console.log("purr");
-  }
+    // Method to make a purring sound
+    purr(): void {
+        console.log('purr');
+    }
 }
 
-// Dog class (extends Animal)
+// Dog class extending Animal
 class Dog extends Animal {
-  constructor(species) {
-    super(species);
-  }
+    constructor(species: string) {
+        super(species); // Call the constructor of the parent class (Animal)
+    }
 
-  // Method that logs "woof" for the dog
-  bark() {
-    console.log("woof");
-  }
+    // Method to make a barking sound
+    bark(): void {
+        console.log('woof');
+    }
 }
 
 // Example usage:
